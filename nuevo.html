@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="vierwport" content="width=device-widrh, initial-scale=1">
+	<title>Compra venta artículos de segunda mano</title>
+	<link rel="icon" type="image/png" href="imagenes/favicon.png">
+	<link rel="stylesheet" type="text/css" href="ejmediaquery.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<script src="codigo01.js"></script>
+</head>
+<body data-pagina="nuevo">
+	<header>
+		<img id="portada" alt="portada" src="imagenes/logom.png">
+		<h1>CHEAPGAMEZ</h1>
+		<h2>Compra y vende online</h2>
+	</header>
+	<nav>
+		<label for="chkMenu">Menú</label>
+		<input type="checkbox" id="chkMenu">
+		<ul>
+			<!--li*5>a[href="pagina $.html"]{Página $} el dolar se sustituye por el valor (5) en cada iteracion del bucle-->
+			
+		</ul>
+	</nav>
+	<section>
+		<div>
+			<form onsubmit="return subirArticulo(this);" method="POST" >
+				<fieldset>
+					<legend> Formulario nuevo artículo </legend>
+					<div>
+						<label for="articulo">Nombre<span class="aster">*</span> </label>
+						<input type="text" name="nombre" id="articulo" placeholder="Introduce nombre artículo" size="30" minlength="1" maxlength="100" required autofocus pattern="[A-Za-z]{1,1}.[A-Za-z0-9]{2,99}"/>
+					</div>
+					<div>
+						<label for="descripcion">Descripción<span class="aster">*</span> </label>
+						<textarea name="descripcion" id="descripcion" placeholder="Descripción artículo"  cols="23" rows="7" minlength="1" maxlength="300" required ></textarea>
+					</div>
+					<div>
+						<label for="precio">Precio </label>
+						<input type="number"  name="precio" id="precio" min="0"  step="0.01" placeholder="Introduce el precio"/> 
+					</div>
+					<div>
+						<label for="categoria">Categoría<span class="aster">*</span> </label>
+						<input type="text" name="categoria" id="categoria" placeholder="Introduce categoría artículo" size="30" minlength="1" maxlength="100" required  list="listacat"/>
+						<datalist id="listacat">
+							
+						</datalist>
+					</div>
+					<input type="submit" value="Alta"/>
+					<input type="reset" value="Limpiar"/>
+				</fieldset>
+			</form>
+			<form >
+				<fieldset>	
+					<p><button onclick="añadirFoto();"><span class="boton">Añadir  foto</span> </button>
+						<div ><label for="foto"><img id="otrafoto" alt="noimg"  src="imagenes/no-imagen.jpg"></label>
+							<input id="foto" hidden="" type="file" name="foto"  accept="image/*" onchange="cargarFoto(this);"/>
+							<input id="dalefoto" type="checkbox" readonly="readonly" onclick="return enviarFoto(this);">
+						</div>
+					</p><br><br><br><br><br><br><br><br><br>
+					<p class="selfot"><label for="foto"><span class="boton">Seleccionar foto</span> </label><span class="boton">Borrar foto</span></p>
+					
+				</fieldset>
+			</form> 
+				
+			
+		
+    		
+
+		</div>
+	</section>
+			
+    <footer>
+		<a href="#"><img id="gapo" alt="gapo" src="imagenes/flecha.png" title="Ir arriba" /></a>
+		<p>&copy; PCW<time datetime="2020">-2020   </time><a href="acerca.html" class="sb"> Sobre nosotros</a></p>
+	</footer>
+	<script>registrado()</script>
+	<script>pedirCategorias()</script>
+</body>
+
+</html>

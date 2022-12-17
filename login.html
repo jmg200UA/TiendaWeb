@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="vierwport" content="width=device-widrh, initial-scale=1">
+	<title>Compra venta artículos de segunda mano</title>
+	<link rel="icon" type="image/png" href="imagenes/favicon.png">
+	<link rel="stylesheet" type="text/css" href="ejmediaquery.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<script src="codigo01.js"></script>
+</head>
+<body data-pagina="login">
+	<header>
+		<img id="portada" alt="portada" src="imagenes/logom.png">
+		<h1>CHEAPGAMEZ</h1>
+		<h2>Compra y vende online</h2>
+	</header>
+	<nav>
+		<label for="chkMenu">Menú</label>
+		<input type="checkbox" id="chkMenu">
+		<ul>
+			<!--li*5>a[href="pagina $.html"]{Página $} el dolar se sustituye por el valor (5) en cada iteracion del bucle-->
+			
+		</ul>
+	</nav>
+	<section>
+		<div>
+			<form onsubmit="return hacerLogin(this);" id="registro" method="POST">
+				<fieldset>
+					<legend> Login </legend>
+					<div>
+						<label for="usuario">Login<span class="aster">*</span> </label>
+						<input type="text" name="login" id="usuario" placeholder="Introduce tu usuario" size="20" minlength="4" maxlength="20" required autofocus pattern="[A-Za-z]{1,1}.[A-Za-z0-9]{2,19}"/>
+					</div>
+					<div>
+						<label for="contrasena">Password <span class="aster">*</span> </label>
+						<input type="password" name="pwd" id="contrasena" placeholder="Introduce tu contraseña" size="20" minlength="6" maxlength="20" required pattern="[A-Za-z]{1,1}.[A-Za-z0-9_-]{4,19}"/>
+					</div>
+				<input type="submit" value="Entrar"/>
+					    
+				</fieldset>
+				  
+				<br>
+        		<h4>¿Todavía no estás registrado?</h4>
+    			<h2><button onclick="location.href='registro.html'"> Registro </button></h2>
+    		</form>
+		</div>
+	</section>
+
+	
+    <footer>
+		<a href="#"><img id="gapo" alt="gapo" src="imagenes/flecha.png" title="Ir arriba" /></a>
+		<p>&copy; PCW<time datetime="2020">-2020   </time><a href="acerca.html" class="sb"> Sobre nosotros</a></p>
+	</footer>
+	<script>registrado()</script>
+</body>
+
+</html>
